@@ -40,3 +40,61 @@ You can run the script by providing the path to the project you want to process 
 
 ```bash
 python scripts/project_file_processor.py <project_path> <output_file>
+```
+## Example
+
+### Step 1: Basic Command
+
+You can run the script by providing the path to the project you want to process and the path to the output file:
+
+```bash
+python scripts/project_file_processor.py <project_path> <output_file>
+```
+This command will process all readable files in the specified project directory and output the details to project_content.txt.
+
+### Step 2: Ignoring Specific File Extensions
+
+To ignore files with specific extensions (e.g., .html, .class), use the --ignore option:
+
+```bash
+python scripts/project_file_processor.py <project_path> <output_file> --ignore .html .class
+```
+This command will process the project but skip any .html or .class files.
+
+## Command-Line Arguments
+
+- `<project_path>`: The path to the project directory you want to process.
+- `<output_file>`: The path to the output text file where file details will be saved.
+- `--ignore`: (Optional) Specify file extensions to ignore. You can pass multiple extensions like `.html`, `.class`.
+
+## Logging
+The script logs important information to the console using the `logging` module. It logs:
+
+- Info messages for file processing and completion.
+- Warning messages for unreadable files or files with encoding issues.
+
+## Sample Output
+Here’s an example of what the output text file might look like:
+```bash
+File Name: example_file.py
+File Path: C:\path\to\example_file.py
+File Content:
+<Contents of example_file.py>
+
+================================================================================
+File Name: another_file.txt
+File Path: C:\path\to\another_file.txt
+File Content:
+<Contents of another_file.txt>
+
+================================================================================
+
+```
+### Error Handling
+- If the provided project path is invalid, the script will log an error and terminate.
+- Files with encoding issues or that cannot be read will be skipped, and the error will be logged.
+
+## Contribution
+Feel free to fork this repository, submit issues, and create pull requests.
+
+
