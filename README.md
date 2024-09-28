@@ -91,7 +91,7 @@ File Content:
 
 ```
 ### Error Handling
-- If the provided project path is invalid, the script will log an error and terminate.
+If the provided project path is invalid, the script will log an error and terminate.
 - Files with encoding issues or that cannot be read will be skipped, and the error will be logged.
 
 ## Contribution
